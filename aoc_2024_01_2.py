@@ -1,0 +1,6 @@
+input = open("input/input_01.txt").read().replace("   ", "\n").strip().split("\n")
+left = list(map(int, input[0::2]))
+right = list(map(int, input[1::2]))
+left.sort()
+right.sort()
+print(sum([i * right.count(i) for i in left]))
